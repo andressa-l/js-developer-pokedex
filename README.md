@@ -24,10 +24,11 @@ O Bootcamp Fullstack Java + Angular da DIO contou com o desafio "Construindo uma
 
 ## **Challenges 👩‍💻 - Screenshots**
 
+[![Imagem do desafio concluido](/assets/images/image-desafio.png)](https://github.com/andressa-l)
 
 ## **🗯️ Inspiração**
-- Design inspirado pela (https://dribbble.com/shots/6540871-Pokedex-App) feito por [Saepul Nahwan](https://dribbble.com/saepulnahwan23).
-- Não consegui entregar 100% o layout de inspiração, é preciso voltar ao código para manutenção e ajustes, entretanto foi uma ótima inspiração.
+- Design inspirado pela [Dribbble](https://dribbble.com/shots/6540871-Pokedex-App) feito por [Saepul Nahwan](https://dribbble.com/saepulnahwan23).
+- Não foi possível entregar 100% o layout de inspiração, é preciso voltar ao código para manutenção e ajustes, entretanto foi uma ótima inspiração.
 
 ##
-<div align="center">Feito com 💜 por <a href="https://github.com/andressa-l">Andressa</a>.</div>
+<b><div align="center">Feito com 💜 por <a href="https://github.com/andressa-l">Andressa</a>.</div></b>
