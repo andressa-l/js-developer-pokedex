@@ -1,9 +1,17 @@
+
 .content .image-pokeball {
     background-image: url(/assets/images/pokeball-fundo.png);
     background-repeat: no-repeat;
     background-position: right center;
     background-size: contain;
     
+}
+
+.content {
+    background-color: #fff;
+    width: 100vw;
+    height: 100vh;
+    padding: 1rem;
 }
 
 .pokemons {

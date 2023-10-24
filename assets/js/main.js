@@ -23,45 +23,35 @@ function getProfilePokemon(id) {
             const newHtml =
                 `
         <!-- Seção de informações básicas -->
-        <section class="basic ${pokemon.type}">
-            <h1 class="name">${pokemon.name}</h1>
-            <ol class="types">
-                ${pokemon.types
-                    .map((type) => `<li class="type ${type}"> ${type}</li>`)
-                    .join("")}
-            </ol>
-  
-            <div class="img">
-                <img src="${pokemon.photo}" alt="${pokemon.img}">
-            </div>
-        </section>
-  
-        <!-- Seção de detalhes -->
+        
         <section class="details">
-  
-            <div class="menu">
-                <div class="menu_option" onclick="showItems('about')">About</div>
-                <div class="menu_option" onclick="showItems('base_stats')">Base Stats</div>
+            <div class="basic">
+                <div class="basic ${pokemon.type}">
+                    <h1 class="name">${pokemon.name}</h1>
+                    <p class="number">#${pokemon.number}</p>
+                    <ul class="types">
+                        ${pokemon.types
+                            .map((type) => `<li class="type ${type}"> ${type}</li>`)
+                            .join("")}
+                    </ul>
+                    <img class="img" src="${pokemon.photo}" alt="${pokemon.img}">
+                </div>
             </div>
-            <div id="linha"></div>
             <div class="menu_items" id="about">
-                <ol>
-                    <li id="species">Species <span class="span-details">${pokemon.species}</span></li>
-                    <li id="height">Height <span class="span-details">${pokemon.height}</span></li>
-                    <li id="weight">Weight <span class="span-details">${pokemon.weight}</span></li>
-                    <li id="abilities">Abilities <span class="span-details">${pokemon.abilities}</span></li>
-                </ol>
+                <ul class="atributes">
+                    <li class="span-details" id="hp">HP <b>${pokemon.hp}</b></li>
+                    <li class="span-details" id="attack">Attack <b>${pokemon.attack}</b></li>
+                    <li class="span-details" id="defense">Defense <b>${pokemon.defense}</b></li>
+                    <li class="span-details" id="height">Height <b>${pokemon.height}</b></li>
+                    <li class="span-details" id="weight">Weight <b>${pokemon.weight}</b></li>
+                </ul>
+                        
+                <ul class="skills">
+                    <li class="skill" id="abilities">${pokemon.abilities}</li>
+                </ul>
             </div>
-  
-            <div class="menu_items" id="base_stats">
-                <ol>
-                    <li id="hp">HP <span class="span-details">${pokemon.hp}</span></li>
-                    <li id="attack">Attack <span class="span-details">${pokemon.attack}</span></li>
-                    <li id="defense">Defense <span class="span-details">${pokemon.defense}</span></li>
-                </ol>
-            </div>
-  
-        </section>
+            
+        </div>
         `;
             if (profileContent) {
                 profileContent.innerHTML = newHtml;
@@ -131,6 +121,3 @@ if (loadMoreButton) {
         }
     })
 }
-
-
-

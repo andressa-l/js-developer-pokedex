@@ -1,3 +1,10 @@
+body {
+    background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("https://wallpapercave.com/wp/BQYb4Cl.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
 .arrow-back{
     padding: .25rem .5rem;
     margin: .25rem 0;
@@ -6,41 +13,47 @@
     background-color: #6c79db;
     border: none;
     border-radius: 1rem;
+    width: 50px;
+    height: 30px;
+    margin-left: 20px;
 }
 
 .content{
-    width: 100vw;
-    display: grid;
-    flex-direction: column;
-    align-items: center;    
-    justify-content: center;
-    max-width: 992px;
-    height: auto;
-    margin: 1rem auto;
-    border-radius: 1rem;
-    justify-items: center;
-    align-content: center;
-}
-
-.basic {
-    border-top-right-radius: 1rem;
-    border-top-left-radius: 1rem;
     display: flex;
-    flex-direction: column;
-    margin: 1rem 1rem 0 1rem;
-    padding: 2rem 2rem 0 2rem;
-    
+    justify-content: center;
+    max-width: 1440px;
+    padding: 20px;
+    gap: 50px;
 }
 
-.content .basic .name{
-    padding: 0;
+.content .details{
+    max-height: 15rem;
+}
+
+.content .details .basic{
+    height: 15rem;
+    width: 15rem;
+    border-radius: 25px;
+    position: relative;
+}
+
+.content .details .basic .name{
+    padding: .625rem;
     margin: .625rem;
     color: #fff;
     text-transform: capitalize;
-    text-align: left;
+    text-align: center;
 }
 
-.content .basic .types{
+.content .details .basic .number {
+    color: #000;
+    opacity: .3;
+    text-align: right;
+    font-size: 1rem;
+    margin: .625rem;
+}
+
+.content .details .basic .types{
     display: flex;
     flex-direction: row;
     padding: 0;
@@ -51,7 +64,7 @@
     justify-content: left;
 
 }
-.content .basic .types .type {
+.content .details .basic .types .type {
     color: #fff;
     padding: .25rem .5rem;
     margin: .25rem 0;
@@ -60,69 +73,44 @@
     text-align: center;
 }
 
-.content .basic .img{
-    max-width: 100%;
-    max-height: 100%;
-    place-items: center;
-    display: flex;
-    align-items: center;    
-    justify-content: center;
-}
-
-.content .details{
-    /* background-color: #fff; */
-    margin: 0;
-    border-radius: 5%; 
-    display: flex;
-    flex-direction: column;
-    margin: 0 1rem 1rem 1rem;
-    padding: 0 2rem 2rem 2rem;
-}
-
-.content .details .menu{
-    display: flex;
-    justify-content: center;
-    align-items: center
-}
-
-.content .details .menu_option{
-    margin: 1rem;
-    cursor: pointer;
-    padding: .4rem;
-    color: gray;
-}
-
-.content .details .menu_option:hover{
-    border-bottom: solid 3px rgb(48, 48, 145);
+.content .details .basic .img{
+    width: clamp(40%, 5vw, 50%);
+    position: absolute;
+    top: 55%;
+    left: 30%;
+    z-index: 2;
 }
 
 .content .details .menu_items{
-    display: none;
-    color: gray;
+    background-color: #f6f8fc;
+    height: 90%;
+    width: 100%;
+    position: relative;
+    border-radius: 30px;
+    bottom: 18%;
+}
+
+.content .details .menu_items .skills{
+    position: absolute;
+    color: rgb(68, 68, 68);
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 5px;
+    left: 20px;
+    width: 80%;
+    text-align: center;
+}
+
+.content .details .menu_items .atributes{
+    padding: 50px 20px 40px;
+    margin: 0;
 }
 
 .content .details .menu_items .span-details{
-    color: #000;
-    display: inline-flex;
-    margin-left: 1rem;
-}
-
-.content .details .menu_items.active{
-    display: block;
-}
-
-.content .details .menu_items ol{
-    list-style: none;
     display: flex;
-    flex-direction:column;
-    margin: .625rem;
-    gap: 1rem;
-    justify-content: flex-start;
-}
-
-#linha {
-    width: 100%;
-    border-bottom: 1px solid grey;
+    justify-content: space-between;
+    color: rgb(170, 170, 170);
+    font-size: 15px;
 }
 
 #species{
@@ -136,15 +124,13 @@
 @media screen and (max-width: 700px) {
 
     .content{
-        width: 100vw;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        flex-direction: column
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
     }
 
-    .basic, .details{
-        flex-basis: 48%;
+    .details{
+        height: 500px;
     }
 
 }
